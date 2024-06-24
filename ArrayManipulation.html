@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question10</title> 
+  
+</head>
+<body>
+
+    <script>        
+      
+        // input the users
+        var numberOne = Number(prompt("Enter number one:")); 
+        var numberTwo = Number(prompt("Enter number two:")); 
+        var numberThree = Number(prompt("Enter number three:")); 
+        var numberFour = Number(prompt("Enter number four:")); 
+        var numberFive = Number(prompt("Enter number five:")); 
+        var numberSix = Number(prompt("Enter number six:")); 
+        var numberSeven = Number(prompt("Enter number seven:")); 
+        var numberEight = Number(prompt("Enter number eight:")); 
+        var numberNine = Number(prompt("Enter number nine:")); 
+        var numberTen = Number(prompt("Enter number ten:"));  
+
+
+        // a) array of numbers
+        var arrayOfNumbers = [];
+        arrayOfNumbers.push(numberOne);
+        arrayOfNumbers.push(numberTwo);
+        arrayOfNumbers.push(numberThree);
+        arrayOfNumbers.push(numberFour);
+        arrayOfNumbers.push(numberFive);
+        arrayOfNumbers.push(numberSix);
+        arrayOfNumbers.push(numberSeven);
+        arrayOfNumbers.push(numberEight);
+        arrayOfNumbers.push(numberNine);
+        arrayOfNumbers.push(numberTen);
+        console.log(arrayOfNumbers);
+        
+
+        // b) number of positive numbers
+
+        var countPositive = 0; 
+        for(let i = 0; i < arrayOfNumbers.length; i++){ 
+
+            if(arrayOfNumbers[i] > 1){
+                countPositive = countPositive +1; 
+            }
+        }
+
+        console.log("positive numbers: "+ countPositive);
+
+         // c) number of negative numbers
+       
+        var countNegative = 0; 
+        for(let i = 0; i < arrayOfNumbers.length; i++){ 
+
+            if(arrayOfNumbers[i] < 0){
+                countNegative = countNegative +1; 
+            }
+        }
+
+        console.log("negative numbers: "+countNegative);
+
+        // d) number of odd numbers
+        var countOdd = 0; 
+        for(let i = 0; i < arrayOfNumbers.length; i++){ 
+
+            if(arrayOfNumbers[i] % 2 === 1) {
+                countOdd = countOdd +1; 
+            }
+           
+        }
+
+        console.log("odd numbers: "+countOdd);
+
+
+         // e) number of even numbers
+         var countEven = 0; 
+        for(let i = 0; i < arrayOfNumbers.length; i++){ 
+
+            if(arrayOfNumbers[i] % 2 === 0) { 
+                countEven = countEven +1; 
+            }
+           
+        }
+
+        console.log("even numbers: "+countEven);  
+
+    </script>
+    
+</body>
+</html>

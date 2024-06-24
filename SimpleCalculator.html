@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 6</title>
+</head>
+<body>
+<script>
+  var number1, number2, operator;
+  var result;
+  
+  number1 = Number(prompt("Enter Number 1:"));
+  number2 = Number(prompt("Enter Number 2:"));
+  operator = prompt("Enter an operator");
+
+  if (Number.isInteger(number1) && Number.isInteger(number2)) {
+    switch (operator) {
+    case '+':
+      result = number1 + number2;
+      break;
+    case '-':
+    result = number1 - number2;
+      break;
+    case '*':
+    result = number1 * number2;
+      break;
+    case '/':
+    result = number1 / number2;
+      break;
+    default:
+      break;
+  }
+  alert("Result is: " + result );
+  
+} else {
+  alert("Please enter an Integer for Number 1 and Number 2!");
+  }
+  
+
+
+</script>
+</body>
+</html>

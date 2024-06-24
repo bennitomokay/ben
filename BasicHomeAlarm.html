@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const code = 1234;
+        var userCode = 0;
+
+        while(userCode  != code){
+            userCode = Number(window.prompt("Please enter alarm code"));
+
+            if(userCode===code){
+                alert("Alarm disarmed");
+                break;
+            }
+            else{
+                alert("Alarm is ringing");
+            }
+        }
+
+    </script>
+</body>
+</html>

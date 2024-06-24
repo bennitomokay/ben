@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 8</title>
+</head>
+<body>
+<script>
+  var oldSalary = 1*prompt("Enter Current Salary: ");
+  var newSalary;
+
+
+  function calcNewSalary(oldSalary) {
+    if (oldSalary > 1 && oldSalary <= 5000 ) {
+      newSalary = (oldSalary/10) + oldSalary; 
+    }
+    if (oldSalary > 5001 && oldSalary <= 10000 ) {
+      newSalary = (oldSalary/8.5) + oldSalary; 
+    }
+    if (oldSalary > 10001 && oldSalary <= 100001 ) {
+      newSalary = (oldSalary/7.5) + oldSalary; 
+    }
+    if (oldSalary > 100001) {
+      newSalary = (oldSalary/5) + oldSalary; 
+    }
+  }
+
+  calcNewSalary(oldSalary);
+  alert("New Salary: " + newSalary);
+
+
+</script>
+</body>
+</html>

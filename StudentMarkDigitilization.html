@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //a)
+        function Student(Name, WPR2x1, STAT2x1, DBD2x1){
+
+            this.name = name;
+            this.WPR2x1 = WPR2x1;
+            this.STAT2x1=STAT2x1;
+            this.DBD2x1 = DBD2x1;
+        }
+
+
+
+        let jane = new Student("Jane", 56, 78, 38);
+        let thato = new Student("Thato", 46, 46, 67);
+        let zane = new Student("Zane", 81, 55, 77);
+
+        //console.log(Student);
+        //b
+        let arr = [["Jane", 56, 78, 38], ["Thato", 46, 46, 67], ["Zane", 81, 55, 77]];
+
+        //c
+        
+        function passed(arr){
+
+            for (let i = 0; i < arr.length; i++) {
+                
+                for (let j = 1; i <= 3; j++) {
+                    
+                    if(arr[i][j]>=50){
+                        console.log(arr[i][0]+" passed "+arr[i][j]);
+                    }
+                    
+                }
+                
+            }
+
+        }
+
+        //passed(arr);
+
+
+        //d
+        
+        function passedAll(arr){
+
+            for (let i = 0; i < arr.length; i++) {
+                var counter = 0;
+                var passedCounter = 0;
+                for (let j = 1; j < 4; j++) {
+
+                      if(arr[i][j]>=50){
+                          counter++;
+                      }                 
+                }
+
+                if(counter===3){
+                    console.log(arr[i][0]+" passed all 3 subjects");
+                    passedCounter++;
+                }
+                
+            }
+            console.log("total that passed all 3 subjects: "+passedCounter);
+            
+        }
+
+        passedAll(arr);
+
+
+
+        //e
+
+        function average(arr){
+
+            
+            for (let i = 1; i < 4; i++) {
+                let avg = 0;
+                for (let j = 0; j < 3; j++) {
+                    
+                    avg+=arr[j][i];
+                    
+                }
+
+                console.log(avg/3);
+                
+            }
+            
+        }
+
+        average(arr);
+
+
+    </script>
+</body>
+</html>

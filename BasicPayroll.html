@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <label>Name</label><br>
+        <input id = "Name", type = "text"><br>
+        <label>Surname</label><br>
+        <input id = "Surname", type = "text"><br>
+        <label>age</label><br>
+        <input id = "Age", type = "text"><br>
+        <label>Job Title</label><br>
+        <input id = "Job", type = "text"><br>
+        <label>Salary</label><br>
+        <input id = "Salary", type = "text"><br>
+    </form>
+
+    <button id = "empDetails">Add employee details</button><br>
+    <button id="view">view employee details</button>
+
+    <table>
+        <tr>
+            <th>First name</th>
+            <th>last name</th>
+            <th>age</th>
+            <th>job title</th>
+            <th>salary</th>
+        </tr>
+    </table>
+
+    <p id="display"></p>
+
+    <script>
+        let list = [];
+        document.getElementById("empDetails").addEventListener("click", add);
+
+        function add(){
+            list.push(document.getElementById("Name").value+","+document.getElementById("Surname").value+","+document.getElementById("Age").value+","+document.getElementById("Job").value+","+document.getElementById("Salary").value);
+            console.log(list);
+        }
+
+        document.getElementById("view").addEventListener("click", view);
+
+        function view(){
+            for (let i = 0; i < list.length; i++) {
+                
+                let newP = document.createElement("p");
+                let newPText = document.createTextNode(list[i]);
+
+                newP.appendChild(newPText);
+
+                document.getElementById("display").appendChild(newP);
+
+
+                
+            }
+        }
+
+    </script>
+</body>
+</html>

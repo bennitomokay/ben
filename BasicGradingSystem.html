@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5</title>
+</head>
+<body>
+<script>
+  var test1,test2,assignment,project,exam;
+  
+  test1 = Number(prompt("Enter Mark for Test 1:"));
+  test2 = Number(prompt("Enter Mark for Test 2:"));
+  assignment = Number(prompt("Enter Mark for Assignment:"));
+  project = Number(prompt("Enter Mark for Project:"));
+  exam = Number(prompt("Enter Mark for Exam:"));
+
+  test1 = (test1/120) * 20;
+  test2 = (test2/120) * 15;
+  assignment = (assignment/120) * 10;
+  project = (project/120) * 15;
+  exam = (exam/120) * 40;
+
+  const finalMark = test1+test2+assignment+project+exam;
+
+  if (finalMark >= 90) {
+    alert("Final mark Percentage = " + finalMark + " Grade A");
+  }
+  else if (finalMark >= 80) {
+    alert("Final mark Percentage = " + finalMark + " Grade B");
+  }
+  else if (finalMark >= 70) {
+    alert("Final mark Percentage = " + finalMark + " Grade C");
+  }
+  else if (finalMark >= 60) {
+    alert("Final mark Percentage = " + finalMark + " Grade D");
+  }
+  else if (finalMark >= 40) {
+    alert("Final mark Percentage = " + finalMark + " Grade E");
+  }
+  else if (finalMark < 40) {
+    alert("Final mark Percentage = " + finalMark + " Grade F");
+  }
+
+</script>
+</body>
+</html>
